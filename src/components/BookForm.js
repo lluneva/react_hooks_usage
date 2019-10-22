@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 import { BookContext } from "../contexts/BookContext";
+import Button from "../styledComponents/button";
+import ButtonsWrapper from "../styledComponents/ButtonsWrapper";
 
 const BookForm = () => {
   const { dispatch } = useContext(BookContext);
@@ -15,25 +17,33 @@ const BookForm = () => {
     dispatch({ type: "ADD_BOOK", book: { title, author } });
     setBookValues({ title: "", author: "" });
   };
+
+  const handleBookRemoval = () => {
+    dispatch({ type: "REMOVE_ALL_BOOKS" });
+    setBookValues({ title: "", author: "" });
+  };
   return (
     <form onSubmit={handleSubmit}>
       <input
-        type="text"
-        placeholder="book title"
-        name="title"
+        type='text'
+        placeholder='book title'
+        name='title'
         value={bookValues.title}
         onChange={handleInputChange}
         required
       />
       <input
-        type="text"
-        placeholder="book author"
-        name="author"
+        type='text'
+        placeholder='book author'
+        name='author'
         value={bookValues.author}
         onChange={handleInputChange}
         required
       />
-      <input type="submit" value="add book" />
+      <ButtonsWrapper>
+        <Button primary type='submit' value='add book' />
+        <Button type='button' value='remove all books' onClick={handleBookRemoval} />
+      </ButtonsWrapper>
     </form>
   );
 };
