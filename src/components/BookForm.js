@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { BookContext } from "../contexts/BookContext";
-import Button from "../styledComponents/button";
+import { InputButton, InputText } from "../styledComponents/Input";
 import ButtonsWrapper from "../styledComponents/ButtonsWrapper";
 
 const BookForm = () => {
@@ -24,15 +24,15 @@ const BookForm = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type='text'
+      <InputText
+        // type='text'
         placeholder='book title'
         name='title'
         value={bookValues.title}
         onChange={handleInputChange}
         required
       />
-      <input
+      <InputText
         type='text'
         placeholder='book author'
         name='author'
@@ -41,8 +41,8 @@ const BookForm = () => {
         required
       />
       <ButtonsWrapper>
-        <Button primary type='submit' value='add book' />
-        <Button type='button' value='remove all books' onClick={handleBookRemoval} />
+        <InputButton primary type='submit' value='add book' />
+        <InputButton type='button' value='remove all books' onClick={handleBookRemoval} />
       </ButtonsWrapper>
     </form>
   );

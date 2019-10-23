@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-      <HeaderText>Reading list</HeaderText>
+      <HeaderText Modak>Reading list</HeaderText>
       <p>
         Currently you have {books.length} {getCorrectWord(books.length)}
         {` `}
