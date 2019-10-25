@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
-import { BookContext } from "../contexts/BookContext";
-import { getCorrectWord } from "../helpers/utils";
-import HeaderText from "../styledComponents/HeaderText";
+import React, { useContext } from 'react';
+import { BookContext } from '../contexts/BookContext';
+import { getCorrectWord } from '../helpers/utils';
+import HeaderText from '../styledComponents/HeaderText';
 
 const Navbar = () => {
   const { books } = useContext(BookContext);
 
   return (
-    <div className='navbar'>
+    <div className="navbar">
       <HeaderText Modak>Reading list</HeaderText>
       <p>
         Currently you have {books.length} {getCorrectWord(books.length)}

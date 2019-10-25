@@ -1,18 +1,18 @@
-import React from 'react'
-import { SectionWrapper } from '../App'
-import ShoppingForm from './ShoppingForm'
-import ShoppingList from './ShoppingList'
-import ShoppingContextProvider from '../contexts/ShoppingContext'
+import React from 'react';
+import { SectionWrapper } from '../styledComponents/SectionWrapper';
+import ShoppingForm from './ShoppingForm';
+import ShoppingList from './ShoppingList';
+import ShoppingContextProvider from '../contexts/ShoppingContext';
+import HeaderText from '../styledComponents/HeaderText';
 
-const ShoppingSection = () => {
-    return (
-        <SectionWrapper>
-            <ShoppingContextProvider>
-                <ShoppingForm />
-                <ShoppingList />
-            </ShoppingContextProvider>
-        </SectionWrapper>
-    )
-}
+const ShoppingSection = () => (
+  <SectionWrapper>
+    <HeaderText>Shopping List App</HeaderText>
+    <ShoppingContextProvider>
+      <ShoppingForm />
+      <ShoppingList />
+    </ShoppingContextProvider>
+  </SectionWrapper>
+);
 
-export default ShoppingSection
+export default ShoppingSection;

@@ -1,13 +1,14 @@
-import React from "react"
-import styled, { ThemeProvider } from "styled-components"
-import { GlobalStyle } from "./theme/globalStyle"
-import ClicksCounterSection from "./components/ClicksCounterSection"
-import BookListSection from "./components/BookListSection"
-import ShoppingSection from "./components/ShoppingSection"
+import React from 'react';
+import styled, { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './theme/globalStyle';
+import ClicksCounterSection from './components/ClicksCounterSection';
+import BookListSection from './components/BookListSection';
+import ShoppingSection from './components/ShoppingSection';
+
 const theme = {
-  headerFont: "Fascinate Inline",
-  bodyFont: "Open Sans"
-}
+  headerFont: 'Fascinate Inline',
+  bodyFont: 'Open Sans',
+};
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -18,28 +19,23 @@ function App() {
         <ShoppingSection />
       </Wrapper>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;
 
 export const Wrapper = styled.div`
   background: #4c2a4c;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 700px;
+  padding: 20px;
   color: #eee;
-  /* font-family: ${(props) => props.theme.fontFam}; */
-`
-export const SectionWrapper = styled.section`
-  margin: 2rem auto;
-  padding: 1rem;
-  border-radius: 5px;
-  :nth-of-type(2n + 1) {
-    background: teal;
-  }
+  display: flex;
+justify-content: center;
+flex-wrap: wrap;
+section{ width:30%;
+min-width: 400px;
+margin: 10px;}
+  
+  /* font-family: ${props => props.theme.fontFam}; */
+`;
 
-  :nth-of-type(2n) {
-    background: orangered;
-  }
-`
+

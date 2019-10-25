@@ -1,20 +1,18 @@
-import React from "react"
-import BookContextProvider from "../contexts/BookContext"
-import Navbar from "./Navbar"
-import BookList from "./BookList"
-import BookForm from "./BookForm";
-import { SectionWrapper } from "../App"
+import React from 'react';
+import BookContextProvider from '../contexts/BookContext';
+import Navbar from './Navbar';
+import BookList from './BookList';
+import BookForm from './BookForm';
+import { SectionWrapper } from '../styledComponents/SectionWrapper';
 
-const BookListSection = () => {
-  return (
-    <SectionWrapper>
-      <BookContextProvider>
-        <Navbar />
-        <BookList />
-        <BookForm />
-      </BookContextProvider>
-    </SectionWrapper>
-  )
-}
+const BookListSection = () => (
+  <SectionWrapper>
+    <BookContextProvider>
+      <Navbar />
+      <BookList />
+      <BookForm />
+    </BookContextProvider>
+  </SectionWrapper>
+);
 
-export default BookListSection
+export default BookListSection;

@@ -1,14 +1,27 @@
-import React, { useContext } from 'react'
-import { ShoppingContext } from '../contexts/ShoppingContext'
+import React, { useContext } from 'react';
+import { ShoppingContext } from '../contexts/ShoppingContext';
+import ShoppingItem from './ShoppingItem';
+import styled from "styled-components"
 
 const ShoppingList = () => {
-    console.log(useContext(ShoppingContext))
-    // const { list } = useContext(ShoppingContext)
-    return (
-        <div>
-            {/* {list.map(item => <li>{item}F</li>)} */}
-        </div>
-    )
-}
+  const { listToBuy } = useContext(ShoppingContext);
+  return (
+    <React.Fragment>
+      <ListTitle>Things to buy</ListTitle>
+      {listToBuy.map(item => (
+        <ShoppingItem listItem={item} key={item.id} />
+      ))}
 
-export default ShoppingList
+      <ListTitle>Already bought</ListTitle>
+
+    </React.Fragment>
+  );
+};
+
+export default ShoppingList;
+
+export const ListTitle = styled.h1`
+text-align: center;
+background: #3d3d3d;
+padding: 10px 0;
+`

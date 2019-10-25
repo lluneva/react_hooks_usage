@@ -1,11 +1,11 @@
 export function getCorrectWord(number) {
-  let result = "";
+  let result = '';
   switch (number) {
     case 1:
-      result = "book";
+      result = 'book';
       break;
     default:
-      result = "books";
+      result = 'books';
       break;
   }
   return result;
