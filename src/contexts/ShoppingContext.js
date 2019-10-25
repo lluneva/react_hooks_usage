@@ -10,8 +10,6 @@ const ShoppingContextProvider = props => {
   });
 
 
-
-
   useEffect(() => {
     localStorage.setItem('listToBuy', JSON.stringify(listToBuy));
   }, [listToBuy]);

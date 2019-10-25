@@ -4,7 +4,7 @@ import { ClickContext } from '../contexts/ClickContext';
 import ButtonsWrapper from '../styledComponents/ButtonsWrapper';
 
 const ClickMe = () => {
-  const counter = 0;
+  const counter = 100;
   const { dispatch } = useContext(ClickContext);
   return (
     <>

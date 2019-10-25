@@ -14,12 +14,11 @@ export const shoppingListReducer = (state, action) => {
           id: uuid(),
         },
       ];
-    // case "REMOVE_ITEM":
-    //   return [
-    //     ...state,
-    //     state.filter(item => item.id !== action.id)
-    //   ]
+    case "REMOVE_ITEM":
+      return state.filter(item => item.id !== action.id)
+
     default:
-      break;
+      
+      return state;
   }
 };
