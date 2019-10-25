@@ -4,11 +4,11 @@ import ShoppingItem from './ShoppingItem';
 import styled from "styled-components"
 
 const ShoppingList = () => {
-  const { listToBuy } = useContext(ShoppingContext);
+  const { data } = useContext(ShoppingContext);
   return (
     <React.Fragment>
       <ListTitle>Things to buy</ListTitle>
-      {listToBuy.map(item => (
+      {data.map(item => (
         <ShoppingItem listItem={item} key={item.id} />
       ))}
 

@@ -5,13 +5,17 @@ import styled from "styled-components"
 const ShoppingItem = ({ listItem }) => {
     const { listItemAmount, listItemName, amountMeasure } = listItem;
     const { dispatch } = useContext(ShoppingContext);
+
+
     return (!!listItemName && <StyledListItem>
 
         <label name="remove">
-            <input type="checkbox" name="remove" onClick={() => dispatch({
-                type: "REMOVE_ITEM",
-                id: listItem.id
-            })} />{listItemName}{` `}
+            <input type="checkbox" name="remove"
+                onClick={() => dispatch({
+                    type: "REMOVE_ITEM",
+                    id: listItem.id
+                })}
+            />{listItemName}{` `}
             <span>{listItemAmount}</span><span>{amountMeasure}</span></label>
     </StyledListItem>);
 };

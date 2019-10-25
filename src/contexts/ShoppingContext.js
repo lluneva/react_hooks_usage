@@ -4,19 +4,20 @@ import { shoppingListReducer } from '../reducers/shoppingListReducer';
 export const ShoppingContext = createContext();
 
 const ShoppingContextProvider = props => {
-  const [listToBuy, dispatch] = useReducer(shoppingListReducer, [], () => {
-    const listToBuy = localStorage.getItem('listToBuy');
-    return listToBuy ? JSON.parse(listToBuy) : [];
+  const [data, dispatch] = useReducer(shoppingListReducer, [], () => {
+    const dataFromLocal = localStorage.getItem('data');
+    return dataFromLocal ? JSON.parse(dataFromLocal) : [];
   });
 
-
   useEffect(() => {
-    localStorage.setItem('listToBuy', JSON.stringify(listToBuy));
-  }, [listToBuy]);
+    localStorage.setItem('data', JSON.stringify(data));
+  }, [data]);
 
 
   return (
-    <ShoppingContext.Provider value={{ listToBuy, dispatch }}>{props.children}</ShoppingContext.Provider>
+    <ShoppingContext.Provider value={{ data, dispatch }}>
+      {props.children}
+    </ShoppingContext.Provider>
   );
 };
 
