@@ -12,8 +12,6 @@ const ShoppingList = () => {
         <ShoppingItem listItem={item} key={item.id} />
       ))}
 
-      <ListTitle>Already bought</ListTitle>
-
     </React.Fragment>
   );
 };
