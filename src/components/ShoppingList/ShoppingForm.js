@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
-import { ShoppingContext } from '../contexts/ShoppingContext';
-import { InputText, InputButton } from '../styledComponents/Input';
+import { ShoppingContext } from '../../contexts/ShoppingContext';
+import { InputText, InputButton } from '../../commonStyles/Input';
 import styled from "styled-components"
-import ButtonsWrapper from '../styledComponents/ButtonsWrapper';
+import {ButtonsWrapper} from '../../commonStyles/ButtonsWrapper';
 
 const ShoppingForm = () => {
   const { dispatch } = useContext(ShoppingContext);

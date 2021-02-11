@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ShoppingContext } from '../contexts/ShoppingContext';
+import { ShoppingContext } from '../../contexts/ShoppingContext';
 import ShoppingItem from './ShoppingItem';
 import styled from "styled-components"
 

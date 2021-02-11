@@ -1,9 +1,9 @@
 import React from 'react';
-import { SectionWrapper } from '../styledComponents/SectionWrapper';
+import { SectionWrapper } from '../../commonStyles/SectionWrapper';
 import ShoppingForm from './ShoppingForm';
 import ShoppingList from './ShoppingList';
-import ShoppingContextProvider from '../contexts/ShoppingContext';
-import HeaderText from '../styledComponents/HeaderText';
+import ShoppingContextProvider from '../../contexts/ShoppingContext';
+import HeaderText from '../../commonStyles/HeaderText';
 
 const ShoppingSection = () => (
   <SectionWrapper>

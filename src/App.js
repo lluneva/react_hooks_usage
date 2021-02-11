@@ -1,9 +1,9 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './theme/globalStyle';
-import ClicksCounterSection from './components/ClicksCounterSection';
-import BookListSection from './components/BookListSection';
-import ShoppingSection from './components/ShoppingSection';
+import ClicksCounterSection from './components/ClicksCounter/ClicksCounterSection';
+import BookListSection from './components/BookList/BookListSection';
+import ShoppingSection from './components/ShoppingList/ShoppingSection';
 
 const theme = {
   headerFont: 'Fascinate Inline',
@@ -13,7 +13,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Wrapper className="App">
+      <Wrapper>
         <BookListSection />
         <ClicksCounterSection />
         <ShoppingSection />
